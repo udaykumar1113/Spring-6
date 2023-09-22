@@ -19,3 +19,4 @@ public class Example1 {
         System.out.println("Number from Spring Context is: " + number);
     }
 }
+

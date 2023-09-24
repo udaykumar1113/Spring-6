@@ -3,6 +3,7 @@ package com.example.config;
 import com.example.bean.Vehicle;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class ProjectConfig {
@@ -21,7 +22,8 @@ public class ProjectConfig {
         return vehicle;
     }
 
-    @Bean("thirdVehicle")
+    @Bean
+    @Primary
     Vehicle vehicle3(){
         var vehicle = new Vehicle();
         vehicle.setName("JEEP");

@@ -8,19 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
 @Configuration
+@ComponentScan(basePackages = "com.example.bean")
 public class ProjectConfig {
 
-    @Bean
-    public Vehicle vehicle() {
-        Vehicle vehicle = new Vehicle();
-        vehicle.setName("Toyota");
-        return vehicle;
-    }
-    @Bean
-    public Person person(Vehicle vehicle) {
-        Person person = new Person();
-        person.setName("Lucy");
-        person.setVehicle(vehicle);
-        return person;
-    }
 }

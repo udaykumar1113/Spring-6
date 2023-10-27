@@ -10,7 +10,6 @@ public class Person {
     public Person(){ System.out.println("Person bean created by Spring"); }
 
     private String name = "Luck";
-    @Autowired
     private Vehicle vehicle;
 
     public String getName() { return name; }
@@ -19,5 +18,6 @@ public class Person {
 
     public Vehicle getVehicle() { return vehicle; }
 
+    @Autowired
     public void setVehicle(Vehicle vehicle) { this.vehicle = vehicle; }
 }

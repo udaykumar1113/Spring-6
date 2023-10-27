@@ -24,6 +24,7 @@ public class ProjectConfig {
         return veh;
     }
 
+
     @Bean
     @Primary
     Vehicle vehicle3() {

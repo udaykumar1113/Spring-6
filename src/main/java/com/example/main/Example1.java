@@ -13,11 +13,11 @@ public class Example1 {
     public static void main(String args[]){
 
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
+        String[] persons = context.getBeanNamesForType(Person.class);
         Person person = context.getBean(Person.class);
-        Vehicle vehicle = context.getBean(Vehicle.class);
-        System.out.println("Person name from Spring Context is: " + person.getName());
-        System.out.println("Vehicle name from Spring Context is: " + vehicle.getName());
-        System.out.println("Vehicle that Person own is: " + person.getVehicle().getName());
+        String[] names = context.getBeanNamesForType(Vehicle.class);
+        person.getVehicle().getVehicleServices().playMusic();
+        person.getVehicle().getVehicleServices().moveVehicle();
     }
 }
 

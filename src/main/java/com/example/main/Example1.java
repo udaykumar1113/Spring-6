@@ -3,6 +3,7 @@ package com.example.main;
 import com.example.bean.Person;
 import com.example.bean.Vehicle;
 import com.example.config.ProjectConfig;
+import com.example.service.VehicleService;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -13,11 +14,11 @@ public class Example1 {
     public static void main(String args[]){
 
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
-        String[] persons = context.getBeanNamesForType(Person.class);
-        Person person = context.getBean(Person.class);
-        String[] names = context.getBeanNamesForType(Vehicle.class);
-        person.getVehicle().getVehicleServices().playMusic();
-        person.getVehicle().getVehicleServices().moveVehicle();
+        VehicleService vehicleService1 = context.getBean(VehicleService.class);
+        VehicleService vehicleService2 = context.getBean(VehicleService.class);
+        System.out.println(vehicleService1.equals(vehicleService2) ?
+                vehicleService1.hashCode()+" "+vehicleService2.hashCode() : "Both Objects are not equal");
+
     }
 }
 

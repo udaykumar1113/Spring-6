@@ -2,9 +2,11 @@ package com.example.bean;
 
 import com.example.bean.Vehicle;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 @Component
+@Lazy
 public class Person {
 
     @Autowired

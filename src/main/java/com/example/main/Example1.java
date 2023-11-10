@@ -17,8 +17,8 @@ public class Example1 {
         VehicleService vehicleService1 = context.getBean(VehicleService.class);
         VehicleService vehicleService2 = context.getBean(VehicleService.class);
         System.out.println(vehicleService1.equals(vehicleService2) ?
-                vehicleService1.hashCode()+" "+vehicleService2.hashCode() : "Both Objects are not equal");
-
+         " Objects are equal": vehicleService1.hashCode()+" "+vehicleService2.hashCode()+
+                " Both Objects are not equal");
     }
 }
 
